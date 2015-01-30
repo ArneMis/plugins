@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="be.idealsystems.cordova.extapp.ExtApp"
+    version="2.1.0">
+    
+    <name>ExtApp</name>
+	<author>Dries Gijssels</author>
+	
+	<description>
+		This plugin opens applications in android using the appId, returns and error with message "playstore" if the app is not installed. 
+	</description>
+
+	<license>MIT</license>
+	
+	<js-module src="www/extapp.js" name="ExtApp">
+   	<clobbers target="ExtApp" />
+	</js-module>
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>	
+	
+	<!-- android -->
+	<platform name="android">
+
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="ExtApp" >
+				<param name="android-package" value="be.idealsystems.cordova.extapp.ExtApp"/>
+			</feature>
+		</config-file>
+
+		<source-file src="src/be/idealsystems/cordova/extapp/ExtApp.java" target-dir="src/be/idealsystems/cordova/extapp/" />
+		
+	</platform>
+
+    <platform name="wp8">
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="ExtApp" >
+                <param name="wp-package" value="ExtApp"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/wp8/ExtApp.cs" />
+
+    </platform>
+    
+</plugin>

@@ -34,6 +34,7 @@
 		
 	</platform>
 
+	<!-- windows -->
     <platform name="wp8">
 
         <config-file target="config.xml" parent="/*">

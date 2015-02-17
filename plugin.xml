@@ -47,4 +47,10 @@
 
     </platform>
     
+	<!-- windows universal apps (Windows 8.1, Windows Phone 8.1, Windows 8.0) -->
+    <platform name="windows">
+        <js-module src="src/windows/ExtAppProxy.js" name="ExtAppProxy">
+            <merges target="" />
+        </js-module>
+    </platform>
 </plugin>

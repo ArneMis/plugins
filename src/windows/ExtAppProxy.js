@@ -15,10 +15,8 @@ function launchUri(success, fail, uriString) {
     Windows.System.Launcher.launchUriAsync(appUri, options).then(
         function (launched) {
             if (launched) {
-                console.log("page opened correctly");
                 success(true);
             } else {
-                console.log("an error has occured");
                 fail(false);
             }
         });
@@ -26,9 +24,6 @@ function launchUri(success, fail, uriString) {
 
 module.exports = {
 	launch: function(success, fail, args) {
-        console.log("ExtApp.LAUNCH: " + typeof args[0] + ":" + args[0]);
-        console.log(args);
-
         launchUri(success, fail, args[0]);
 	}
 }

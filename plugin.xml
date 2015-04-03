@@ -30,7 +30,7 @@
 			</feature>
 		</config-file>
 
-		<source-file src="src/be/idealsystems/cordova/extapp/ExtApp.java" target-dir="src/be/idealsystems/cordova/extapp/" />
+		<source-file src="src/android/ExtApp.java" target-dir="src/be/idealsystems/cordova/extapp/" />
 		
 	</platform>
 

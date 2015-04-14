@@ -7,7 +7,18 @@
 
 function launchUri(success, fail, uriString) {
     var appUri = new Windows.Foundation.Uri(uriString);
-    var storeUriString = "http://www.windowsphone.com/nl-be/store/app/" + uriString.substring(uriString.indexOf(":")+1, uriString.length);
+    var locale = "nl-be"; //default
+    navigator.globalization.getLocaleName(
+        function (locale) {
+            console.log("Locale in ExtApp plugin: " + locale.value);
+            var locale = locale.value.toLowerCase()
+        },
+        function () {
+            console.log("Error getting locale in ExtApp plugin");
+        }
+    );
+
+    var storeUriString = "http://www.windowsphone.com/" + locale + "/store/app/" + uriString.substring(uriString.indexOf(":")+1, uriString.length);
     var options = new Windows.System.LauncherOptions();
     var fallbackURI = new Windows.Foundation.Uri(storeUriString);
     options.fallbackUri = fallbackURI;

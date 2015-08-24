@@ -20,7 +20,7 @@ ExtApp.prototype.launch = function(successCallback, errorCallback, options) {
         return;
     }
 
-    cordova.exec(successCallback, errorCallback, "be.idealsystems.cordova.extapp.ExtApp", "launch", [options]);
+    cordova.exec(successCallback, errorCallback, "org.apache.cordova.extapp.ExtApp", "launch", [options]);
 };
 
 

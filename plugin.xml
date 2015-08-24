@@ -19,7 +19,7 @@
 	
 	<!-- android -->
 	<platform name="android">
-		<source-file src="src/android/org/apache/cordova/extapp/ExtApp.java" target-dir="src/org/apache/cordova/extapp" /> 
+		<source-file src="src/android/ExtApp.java" target-dir="src/org/apache/cordova/extapp/" />
 		<config-file target="res/xml/config.xml" parent="/*">
 			<feature name="ExtApp" >
 				<param name="android-package" value="org.apache.cordova.extapp.ExtApp"/>

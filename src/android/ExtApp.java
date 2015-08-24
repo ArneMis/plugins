@@ -1,4 +1,4 @@
-package be.idealsystems.cordova.extapp;
+package org.apache.cordova.extapp;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;

@@ -14,23 +14,18 @@
 	<license>MIT</license>
 	
 	<js-module src="www/extapp.js" name="ExtApp">
-   	<clobbers target="ExtApp" />
+   	<clobbers target="org.apache.cordova.extapp" />
 	</js-module>
-
-	<engines>
-		<engine name="cordova" version=">=3.0.0" />
-	</engines>	
 	
 	<!-- android -->
 	<platform name="android">
-
+		<source-file src="src/android/org/apache/cordova/extapp/ExtApp.java" target-dir="src/org/apache/cordova/extapp" /> 
 		<config-file target="res/xml/config.xml" parent="/*">
 			<feature name="ExtApp" >
-				<param name="android-package" value="be.idealsystems.cordova.extapp.ExtApp"/>
+				<param name="android-package" value="org.apache.cordova.extapp.ExtApp"/>
 			</feature>
 		</config-file>
-
-		<source-file src="src/android/ExtApp.java" target-dir="src/be/idealsystems/cordova/extapp/" />
+		
 		
 	</platform>
 
